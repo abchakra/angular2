@@ -1,0 +1,38 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="form-horizontal">
+	<div class="form-group">
+		<label class="control-label col-lg-2">Name:</label>
+		<div class="col-lg-9">
+			<input type="text" class="form-control" ngModel name="name">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-lg-2">Status:</label>
+		<div class="col-lg-9">
+			<input type="text" class="form-control" ngModel name="status" ng-required="true">
+		</div>
+	</div>
+	<div ngModelGroup="Website" class="form-group">
+		<label class="control-label col-lg-2">Website:</label>
+		<div class="col-lg-3">
+			<input type="text" class="form-control" ngModel name="name" placeholder="Name">
+		</div>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" ngModel name="url" placeholder="Url">
+		</div>
+	</div>
+	<div ngModelGroup="twitter" class="form-group">
+		<label class="control-label col-lg-2">Twitter:</label>
+		<div class="col-lg-3">
+			<input type="text" class="form-control" ngModel name="name" placeholder="Name">
+		</div>
+		<div class="col-lg-6">
+			<input type="text" class="form-control" ngModel name="url" placeholder="Url">
+		</div>
+	</div>
+	<div class="text-center">
+		<div class="btn-group">
+			<button type="submit" class="btn btn-primary">Save</button>
+			<button (click)="cancel()" class="btn btn-default">Cancel</button>
+		</div>
+	</div>
+</form>

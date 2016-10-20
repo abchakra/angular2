@@ -1,0 +1,26 @@
+[
+    {
+        "name": "JuriStrum",
+        "status": "CurrentlyCoding",
+        "website": {
+            "url": "http: //juristr.com",
+            "name": "juristr.com"
+        },
+        "twitter": {
+            "url": "https: //twitter.com/juristr",
+            "name": "@juristr"
+        }
+    },
+    {
+        "name": "Abhishek Charkaborty",
+        "status": "Currently working on Eclipse",
+        "website": {
+            "url": "http: //abhishekc.com",
+            "name": "abhishekc.com"
+        },
+        "twitter": {
+            "url": "https: //twitter.com/abchakra",
+            "name": "@abchakra"
+        }
+    }
+]
