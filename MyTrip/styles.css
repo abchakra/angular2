@@ -1,0 +1,32 @@
+/* Specify styling for tooltip contents */
+.tooltip.customClass .tooltip-inner {
+  color: #880000;
+  background-color: #ffff66;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+/* Hide arrow */
+.tooltip.customClass.fade{
+  transition: opacity 1s;
+}
+.tooltip.customClass .tooltip-arrow {
+  display: none;
+}
+
+.nav-item.customClass {
+	float: right;
+}
+.nav-item.customClass a {
+	background-color: #50ff50;
+}
+
+.card.customClass,
+.card.customClass .card-header,
+.panel.customClass {
+  background-color: #5bc0de;
+  color: #fff;
+  font-weight: bold;
+}
+.panel.customClass .panel-body {
+  background-color: #337aa7;
+  font-weight: normal;
+}

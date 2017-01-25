@@ -1,0 +1,34 @@
+<h2 style="text-align: center">My Trips</h2>
+
+<div class="container" style="text-align: left">
+  <ul class="list-group">
+    <li *ngFor="let trip of trips" class="list-group-item" [class.active]="trip === selectedTrip" (click)="onSelect(trip)">
+      <span class="badge">{{trip.id}}</span>
+      <strong>{{trip.header1}}</strong> : <span>{{trip.header2}} </span>
+    </li>
+  </ul>
+  <!--<my-trip-detail [trip]="selectedTrip"></my-trip-detail>-->
+
+  <div *ngIf="selectedTrip">
+    <h2>
+      {{selectedTrip.header1 | uppercase}} is my trip
+    </h2>
+    <button (click)="gotoDetail()">View Details</button>
+  </div>
+
+
+</div>
+
+
+<!--
+<ul class="heroes">
+  <li *ngFor="let trip of trips" [class.selected]="trip === selectedTrip" (click)="onSelect(trip)">
+    <span class="badge">{{trip.id}}</span> {{trip.header1}}
+  </li>
+</ul>
+<div *ngIf="selectedTrip">
+  <h2>
+    {{selectedTrip.name | uppercase}} is my trip
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>-->

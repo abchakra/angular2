@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+<!--
+<div class="container">
+
+    <accordion [closeOthers]=true>
+        <accordion-group *ngFor="let trip of trips" panelClass="customClass">
+            <div accordion-heading>
+               {{trip.header1}} : {{trip.header2}}
+                    <i class="pull-right float-xs-right glyphicon" [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+            </div>
+            <div class="panel-body">
+                <p>{{trip.desc}}
+                </p>
+                <h4>Tour Agency Delight: <span>{{trip.highlight}}</span></h4>
+            </div>
+        </accordion-group>
+    </accordion>
+</div>-->
+<div class="container">
+    <ul class="list-group">
+        <li *ngFor="let trip of trips" class="list-group-item" [class.active]="trip === selectedTrip" (click)="onSelect(trip)">
+            <span class="badge">{{trip.id}}</span>
+            <strong>{{trip.header1}}</strong> : <span>{{trip.header2}} </span>
+        </li>
+    </ul>
+    <my-trip-detail [trip]="selectedTrip"></my-trip-detail>
+</div>
